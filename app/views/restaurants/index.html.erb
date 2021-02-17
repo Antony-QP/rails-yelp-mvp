@@ -1,11 +1,17 @@
-
-<div class="form-container">
-    <% @restaurants.each do |restaurant| %>
-    <%= restaurant.name %>
-    <%= restaurant.address %>
-    <%= restaurant.phone_number %>
-    <%= restaurant.category %>
-    <%= link_to 'Edit', edit_restaurant_path(restaurant) %>
-    <% end %>
-
+<div class="container mt-5">
+  <% @restaurants.each do |restaurant| %>
+  <div class="row mt-2">
+    <div class="card p-3 w-50">
+      <div class="col-sm">
+        <h3><%= restaurant.name %></h3>
+        <%= restaurant.address %> <%= restaurant.phone_number %> <%=
+        restaurant.category %>
+      </div>
+      <div class="col-sm">
+        <%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn
+        btn-secondary" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>

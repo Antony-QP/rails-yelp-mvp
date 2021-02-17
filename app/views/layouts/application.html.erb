@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-warning mb-5">
+      <span class="navbar-brand mb-0 h1">YELP</span>
+      <%= link_to 'New', new_restaurant_path, class: 'text-dark' %>
+    </nav>
     <%= yield %>
   </body>
 </html>

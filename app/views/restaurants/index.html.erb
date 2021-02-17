@@ -1,0 +1,11 @@
+
+<div class="form-container">
+    <% @restaurants.each do |restaurant| %>
+    <%= restaurant.name %>
+    <%= restaurant.address %>
+    <%= restaurant.phone_number %>
+    <%= restaurant.category %>
+    <%= link_to 'Edit', edit_restaurant_path(restaurant) %>
+    <% end %>
+
+</div>
